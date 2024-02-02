@@ -9,8 +9,14 @@ import GamingIcon from "../assets/img/gaming-icon.png";
 import MoviesIcon from "../assets/img/movies-icon.png";
 import TrendingIcon from "../assets/img/trending-icon.png";
 import NewsIcon from "../assets/img/news-icon.png";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+	const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+	//console.log(isMenuOpen);
+
+	if (!isMenuOpen) return null;
+	//its called early return
 	return (
 		<div className="p-5 w-44 shadow-lg ">
 			<ul className="mb-3">

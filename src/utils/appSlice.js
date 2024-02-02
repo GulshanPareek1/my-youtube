@@ -11,6 +11,6 @@ const appSlice = createSlice({
 		},
 	},
 });
-
+// toggleMenu is a function
 export const { toggleMenu } = appSlice.actions;
 export default appSlice.reducer;
