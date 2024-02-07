@@ -10,6 +10,7 @@ import MoviesIcon from "../assets/img/movies-icon.png";
 import TrendingIcon from "../assets/img/trending-icon.png";
 import NewsIcon from "../assets/img/news-icon.png";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 	const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -20,14 +21,16 @@ const Sidebar = () => {
 	return (
 		<div className="p-5 w-44 shadow-lg ">
 			<ul className="mb-3">
-				<li className="flex pt-1 justify-evenly">
-					<img
-						className="h-6"
-						src={Home}
-						alt="menu"
-					/>
-					<h1>Home</h1>
-				</li>
+				<Link to={"/"}>
+					<li className="flex pt-1 justify-evenly">
+						<img
+							className="h-6"
+							src={Home}
+							alt="menu"
+						/>
+						<h1>Home</h1>
+					</li>
+				</Link>
 				<li className="flex pt-1 justify-evenly">
 					<img
 						className="h-5"
